@@ -2,7 +2,7 @@ import logging
 
 # Konfigurasi logger
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.ERROR)
 
 # Buat FileHandler untuk menulis log ke file
 file_handler = logging.FileHandler('app.log')

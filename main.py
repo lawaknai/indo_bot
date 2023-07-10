@@ -36,6 +36,8 @@ async def start_command_handler(message: types.Message):
         # Tanggapan ketika pengguna mengetikkan /start
         x = message.get_args()
         data = db_manager.get_content([x])
+        if data is None:
+            return
         logger.debug(f"GET DATA DARI DB {data}")
         if data[0] == 'link':
             content = data[1]
